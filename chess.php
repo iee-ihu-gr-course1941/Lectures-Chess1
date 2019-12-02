@@ -1,7 +1,8 @@
 <?php
  
 require_once "lib/dbconnect.php";
-require_once "lib/show_board.php";
+require_once "lib/board.php";
+require_once "lib/game.php";
 
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -23,6 +24,10 @@ switch ($r=array_shift($request)) {
                                                 break;
          }
          break;
+    case 'status': 
+			if(size($request)==0) {show_status();}
+			else {header("HTTP/1.1 404 Not Found");}
+			break
     default:  header("HTTP/1.1 404 Not Found");
                         exit;
 }
