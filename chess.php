@@ -39,6 +39,7 @@ function handle_board($method) {
         } else if ($method=='POST') {
                 // reset_board();
         }
+		
 }
 
 function handle_piece($method, $x,$y,$input) {
