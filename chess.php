@@ -25,9 +25,9 @@ switch ($r=array_shift($request)) {
          }
          break;
     case 'status': 
-			if(size($request)==0) {show_status();}
+			if(sizeof($request)==0) {show_status();}
 			else {header("HTTP/1.1 404 Not Found");}
-			break
+			break;
     default:  header("HTTP/1.1 404 Not Found");
                         exit;
 }
